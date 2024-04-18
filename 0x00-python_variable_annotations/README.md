@@ -130,9 +130,30 @@ i_understand_annotations is a <class 'bool'> with a value of True
 school is a <class 'str'> with a value of Holberton
 ```
 
+5. [Complex types - list of floats](./5-sum_list.py) :
+
+Write a type-annotated function `sum_list` which takes a list `input_list` of floats as argument and returns their sum as a float.
+
+```bash
+bob@dylan:~$ cat 5-main.py
+#!/usr/bin/env python3
+
+sum_list = __import__('5-sum_list').sum_list
+
+floats = [3.14, 1.11, 2.22]
+floats_sum = sum_list(floats)
+print(floats_sum == sum(floats))
+print(sum_list.__annotations__)
+print("sum_list(floats) returns {} which is a {}".format(floats_sum, type(floats_sum)))
+
+bob@dylan:~$ ./5-main.py
+True
+{'input_list': typing.List[float], 'return': <class 'float'>}
+sum_list(floats) returns 6.470000000000001 which is a <class 'float'>
+```
+
 | Task | File |
 | ---- | ---- |
-| 5. Complex types - list of floats | [5-sum_list.py](./5-sum_list.py) |
 | 6. Complex types - mixed list | [6-sum_mixed_list.py](./6-sum_mixed_list.py) |
 | 7. Complex types - string and int/float to tuple | [7-to_kv.py](./7-to_kv.py) |
 | 8. Complex types - functions | [8-make_multiplier.py](./8-make_multiplier.py) |
