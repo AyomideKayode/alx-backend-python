@@ -2,8 +2,6 @@
 
 ![Python](./0x00-python_variable_annotations/main_files/Python_LOGO.png)
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=32&pause=1000&width=435&lines=Python-Backend(:)](https://git.io/typing-svg)
-
 ## Installation:-
 
 ```bash

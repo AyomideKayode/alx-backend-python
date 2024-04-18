@@ -12,7 +12,7 @@ from typing import List
 def sum_list(input_list: List[float]) -> float:
     """Function to return the sum of a list of floats.
     """
-    sum = 0
+    sum = 0.0
 
     for num in input_list:
         if isinstance(num, float):  # if type(num) is float:
