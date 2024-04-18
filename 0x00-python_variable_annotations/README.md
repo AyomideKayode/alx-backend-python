@@ -35,9 +35,28 @@ True
 {'a':  <class 'float'>, 'b': <class 'float'>, 'return': <class 'float'>}
 ```
 
+1. Basic annotations - concat | [1-concat.py](./1-concat.py)
+
+Write a type-annotated function `concat` that takes a string `str1` and a string `str2` as arguments and returns a concatenated string
+
+```bash
+bob@dylan:~$ cat 1-main.py
+#!/usr/bin/env python3
+concat = __import__('1-concat').concat
+
+str1 = "egg"
+str2 = "shell"
+
+print(concat(str1, str2) == "{}{}".format(str1, str2))
+print(concat.__annotations__)
+
+bob@dylan:~$ ./1-main.py
+True
+{'str1': <class 'str'>, 'str2': <class 'str'>, 'return': <class 'str'>}
+```
+
 | Task | File |
 | ---- | ---- |
-| 1. Basic annotations - concat | [1-concat.py](./1-concat.py) |
 | 2. Basic annotations - floor | [2-floor.py](./2-floor.py) |
 | 3. Basic annotations - to string | [3-to_str.py](./3-to_str.py) |
 | 4. Define variables | [4-define_variables.py](./4-define_variables.py) |
