@@ -8,20 +8,20 @@ the output tuple is Tuple
 """
 
 
-# import Tuple & Any class from the typing module
-from typing import Tuple, Any
+# import Tuple class from the typing module
+from typing import Tuple
 
 
-def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple[Any, ...]:
+def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
     """ Change the annotation for 1st and return the type
-        to Tuple[Any, ...]
+        to Tuple
         to indicate that the function accepts and
         returns a tuple of any type.
         Also, change type of array to tuple() instead of list[].
         Lastly, change the float value to interger
         when calling zoom_array
     """
-    zoomed_in: Tuple[Any, ...] = tuple(
+    zoomed_in: Tuple = tuple(
         item for item in lst
         for i in range(factor)
     )
