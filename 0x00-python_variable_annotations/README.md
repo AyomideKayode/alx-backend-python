@@ -1,5 +1,7 @@
 # Project: 0x00. Python - Variable Annotations
 
+![Statically Typed vs Dynamically Typed](./main_files/strongly_dynamically_typed.png)
+
 ## Resources
 
 ### Read or watch:-
@@ -213,3 +215,40 @@ bob@dylan:~$ ./8-main.py
 ```
 
 9. [Let's duck type an iterable object](./9-element_length.py) :
+
+Annotate the below function’s parameters and return values with the appropriate types
+
+```bash
+def element_length(lst):
+    return [(i, len(i)) for i in lst]
+```
+
+```bash
+bob@dylan:~$ cat 9-main.py 
+#!/usr/bin/env python3
+
+element_length =  __import__('9-element_length').element_length
+
+print(element_length.__annotations__)
+
+bob@dylan:~$ ./9-main.py 
+{'lst': typing.Iterable[typing.Sequence], 'return': typing.List[typing.Tuple[typing.Sequence, int]]}
+```
+
+---
+
+### Environment
+
+- Language: Python 3.4.3
+  - OS: Ubuntu 20.04 LTS
+  - Compiler: python3
+  - Style guidelines:
+    - [PEP 8 (version 1.7)](https://www.python.org/dev/peps/pep-0008/)
+
+---
+
+## Author :black_nib:
+
+- _Website_ - [Ayomide Kayode](https://github.com/AyomideKayode)
+- _ALX Software Engineering Program_ - [ALX_AFRICA](https://www.alxafrica.com/programmes/)
+- _Twitter_ - [@kazzy_wiz](https://www.twitter.com/kazzy_wiz)
