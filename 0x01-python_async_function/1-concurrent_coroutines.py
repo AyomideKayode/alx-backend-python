@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 
-""" Module that contains ....
+""" Module that contains Asynchronous coroutine that takes in two arguments
+  and returns a list of delayed float values.
+
+  Args:
+    n (int): The number of tasks to run concurrently.
+    max_delay (int): The maximum delay for each task.
+
+  Returns:
+    List[float]: A list of delayed float values.
 """
 
 import asyncio
