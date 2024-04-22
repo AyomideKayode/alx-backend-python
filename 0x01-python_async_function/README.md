@@ -121,6 +121,40 @@ bob@dylan:~$ ./3-main.py
 <class '_asyncio.Task'>
 ```
 
-| Task | File |
-| ---- | ---- |
-| 4. Tasks | [4-tasks.py](./4-tasks.py) |
+### 4. [Tasks](./4-tasks.py) :-
+
+Take the code from `wait_n` and alter it into a new function `task_wait_n`. The code is nearly identical to `wait_n` except `task_wait_random` is being called.
+
+```bash
+bob@dylan:~$ cat 4-main.py
+#!/usr/bin/env python3
+
+import asyncio
+
+task_wait_n = __import__('4-tasks').task_wait_n
+
+n = 5
+max_delay = 6
+print(asyncio.run(task_wait_n(n, max_delay)))
+
+bob@dylan:~$ ./4-main.py
+[0.2261658205652346, 1.1942770588220557, 1.8410422186086628, 2.1457353803430523, 4.002505454641153]
+```
+
+---
+
+### Environment
+
+- Language: Python 3.4.3
+  - OS: Ubuntu 20.04 LTS
+  - Compiler: python3
+  - Style guidelines:
+    - [PEP 8 (version 1.7)](https://www.python.org/dev/peps/pep-0008/)
+
+---
+
+## Author :black_nib:
+
+- _Website_ - [Ayomide Kayode](https://github.com/AyomideKayode)
+- _ALX Software Engineering Program_ - [ALX_AFRICA](https://www.alxafrica.com/programmes/)
+- _Twitter_ - [@kazzy_wiz](https://www.twitter.com/kazzy_wiz)
