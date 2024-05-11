@@ -7,7 +7,7 @@ to test multiple cases.
 """
 
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, PropertyMock
 from client import GithubOrgClient
 from parameterized import parameterized
 
@@ -34,6 +34,21 @@ class TestGithubOrgClient(unittest.TestCase):
         # Assert that org_data is correct
         # (for simplicity, we'll just assert it's not None)
         self.assertIsNotNone(org_data)
+
+    def test_public_repos_url(self):
+        """unit-test GithubOrgClient._public_repos_url"""
+        # Patch the '_public_repos_url' property of GithubOrgClient class
+        # and set its return value to 'mock_value'
+        with patch.object(GithubOrgClient, '_public_repos_url',
+                          new_callable=PropertyMock) as mock_property:
+            mock_property.return_value = 'mock_value'
+
+            # Create an instance of GithubOrgClient with the specified org_name
+            inst = GithubOrgClient('org_name')
+
+            # Assert that the '_public_repos_url' property of the instance
+            # is equal to 'mock_value'
+            self.assertEqual(inst._public_repos_url, 'mock_value')
 
 
 if __name__ == '__main__':
